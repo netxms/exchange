@@ -1,0 +1,1 @@
+# Extra configuration maintained by NetXMS team
