@@ -1,0 +1,1 @@
+# Standard configuration, that is included in NetXMS release

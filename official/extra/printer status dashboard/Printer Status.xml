@@ -1,0 +1,313 @@
+<dashboard>
+	<name>Printer Status</name>
+	<columns>3</columns>
+	<flags>65536</flags>
+	<autoBindFlags>1</autoBindFlags>
+	<autoBindFilter>classof($object) == "Node" &amp;&amp; $node-&gt;isPrinter</autoBindFilter>
+	<elements>
+		<dashboardElement>
+			<type>13</type>
+<layout>
+   <horizontalSpan>3</horizontalSpan>
+   <verticalSpan>1</verticalSpan>
+   <grabVerticalSpace>false</grabVerticalSpace>
+   <heightHint>-1</heightHint>
+</layout>
+<element>
+   <title></title>
+   <titleFontSize>0</titleFontSize>
+   <dciList length="2">
+      <dci nodeId="0" dciId="0">
+         <dciName></dciName>
+         <dciDescription>Printer model</dciDescription>
+         <type>1</type>
+         <color>UNSET</color>
+         <name></name>
+         <lineWidth>2</lineWidth>
+         <lineChartType>-1</lineChartType>
+         <displayType>-99</displayType>
+         <showThresholds>false</showThresholds>
+         <invertValues>false</invertValues>
+         <useRawValues>false</useRawValues>
+         <multiMatch>false</multiMatch>
+         <regexMatch>true</regexMatch>
+         <instance></instance>
+         <column></column>
+         <displayFormat></displayFormat>
+      </dci>
+      <dci nodeId="0" dciId="0">
+         <dciName></dciName>
+         <dciDescription>Printer location</dciDescription>
+         <type>1</type>
+         <color>UNSET</color>
+         <name></name>
+         <lineWidth>2</lineWidth>
+         <lineChartType>-1</lineChartType>
+         <displayType>-99</displayType>
+         <showThresholds>false</showThresholds>
+         <invertValues>false</invertValues>
+         <useRawValues>false</useRawValues>
+         <multiMatch>false</multiMatch>
+         <regexMatch>true</regexMatch>
+         <instance></instance>
+         <column></column>
+         <displayFormat></displayFormat>
+      </dci>
+   </dciList>
+   <legendPosition>8</legendPosition>
+   <showLegend>false</showLegend>
+   <extendedLegend>false</extendedLegend>
+   <autoScale>true</autoScale>
+   <translucent>false</translucent>
+   <refreshRate>30</refreshRate>
+   <minYScaleValue>0.0</minYScaleValue>
+   <maxYScaleValue>100.0</maxYScaleValue>
+   <modifyYBase>false</modifyYBase>
+   <drillDownObjectId>0</drillDownObjectId>
+   <gaugeType>2</gaugeType>
+   <legendInside>false</legendInside>
+   <vertical>false</vertical>
+   <minValue>0.0</minValue>
+   <maxValue>100.0</maxValue>
+   <leftYellowZone>0.0</leftYellowZone>
+   <leftRedZone>0.0</leftRedZone>
+   <rightYellowZone>70.0</rightYellowZone>
+   <rightRedZone>90.0</rightRedZone>
+   <fontName></fontName>
+   <fontSize>0</fontSize>
+   <expectedTextWidth>0</expectedTextWidth>
+   <elementBordersVisible>false</elementBordersVisible>
+   <colorMode>1</colorMode>
+   <customColor>0</customColor>
+</element>
+		</dashboardElement>
+		<dashboardElement>
+			<type>13</type>
+<layout>
+   <horizontalSpan>3</horizontalSpan>
+   <verticalSpan>1</verticalSpan>
+   <grabVerticalSpace>false</grabVerticalSpace>
+   <heightHint>-1</heightHint>
+</layout>
+<element>
+   <title>Printer Status</title>
+   <titleFontSize>0</titleFontSize>
+   <dciList length="2">
+      <dci nodeId="0" dciId="0">
+         <dciName></dciName>
+         <dciDescription>Printer error state</dciDescription>
+         <type>1</type>
+         <color>UNSET</color>
+         <name>Current error</name>
+         <lineWidth>2</lineWidth>
+         <lineChartType>-1</lineChartType>
+         <displayType>-99</displayType>
+         <showThresholds>false</showThresholds>
+         <invertValues>false</invertValues>
+         <useRawValues>false</useRawValues>
+         <multiMatch>true</multiMatch>
+         <regexMatch>true</regexMatch>
+         <instance></instance>
+         <column></column>
+         <displayFormat></displayFormat>
+      </dci>
+      <dci nodeId="0" dciId="0">
+         <dciName></dciName>
+         <dciDescription>Printer .*status</dciDescription>
+         <type>1</type>
+         <color>UNSET</color>
+         <name></name>
+         <lineWidth>2</lineWidth>
+         <lineChartType>-1</lineChartType>
+         <displayType>-99</displayType>
+         <showThresholds>false</showThresholds>
+         <invertValues>false</invertValues>
+         <useRawValues>false</useRawValues>
+         <multiMatch>true</multiMatch>
+         <regexMatch>true</regexMatch>
+         <instance></instance>
+         <column></column>
+         <displayFormat></displayFormat>
+      </dci>
+   </dciList>
+   <legendPosition>8</legendPosition>
+   <showLegend>true</showLegend>
+   <extendedLegend>false</extendedLegend>
+   <autoScale>true</autoScale>
+   <translucent>false</translucent>
+   <refreshRate>30</refreshRate>
+   <minYScaleValue>0.0</minYScaleValue>
+   <maxYScaleValue>100.0</maxYScaleValue>
+   <modifyYBase>false</modifyYBase>
+   <drillDownObjectId>0</drillDownObjectId>
+   <gaugeType>2</gaugeType>
+   <legendInside>false</legendInside>
+   <vertical>false</vertical>
+   <minValue>0.0</minValue>
+   <maxValue>100.0</maxValue>
+   <leftYellowZone>0.0</leftYellowZone>
+   <leftRedZone>0.0</leftRedZone>
+   <rightYellowZone>70.0</rightYellowZone>
+   <rightRedZone>90.0</rightRedZone>
+   <fontName></fontName>
+   <fontSize>0</fontSize>
+   <expectedTextWidth>0</expectedTextWidth>
+   <elementBordersVisible>false</elementBordersVisible>
+   <colorMode>1</colorMode>
+   <customColor>0</customColor>
+</element>
+		</dashboardElement>
+		<dashboardElement>
+			<type>13</type>
+<layout>
+   <horizontalSpan>2</horizontalSpan>
+   <verticalSpan>1</verticalSpan>
+   <grabVerticalSpace>true</grabVerticalSpace>
+   <heightHint>-1</heightHint>
+</layout>
+<element>
+   <title>Toner status</title>
+   <titleFontSize>0</titleFontSize>
+   <dciList length="5">
+      <dci nodeId="0" dciId="0">
+         <dciName></dciName>
+         <dciDescription>Toner level.*Black.*</dciDescription>
+         <type>1</type>
+         <color>0x161616</color>
+         <name>Black</name>
+         <lineWidth>2</lineWidth>
+         <lineChartType>-1</lineChartType>
+         <displayType>-99</displayType>
+         <showThresholds>false</showThresholds>
+         <invertValues>false</invertValues>
+         <useRawValues>false</useRawValues>
+         <multiMatch>false</multiMatch>
+         <regexMatch>true</regexMatch>
+         <instance></instance>
+         <column></column>
+         <displayFormat></displayFormat>
+      </dci>
+      <dci nodeId="0" dciId="0">
+         <dciName></dciName>
+         <dciDescription>Toner level.*Cyan.*</dciDescription>
+         <type>1</type>
+         <color>0xffdc00</color>
+         <name>Cyan</name>
+         <lineWidth>2</lineWidth>
+         <lineChartType>-1</lineChartType>
+         <displayType>-99</displayType>
+         <showThresholds>false</showThresholds>
+         <invertValues>false</invertValues>
+         <useRawValues>false</useRawValues>
+         <multiMatch>false</multiMatch>
+         <regexMatch>true</regexMatch>
+         <instance></instance>
+         <column></column>
+         <displayFormat></displayFormat>
+      </dci>
+      <dci nodeId="0" dciId="0">
+         <dciName></dciName>
+         <dciDescription>Toner level.*Magenta.*</dciDescription>
+         <type>1</type>
+         <color>0xdd00ff</color>
+         <name>Magenta</name>
+         <lineWidth>2</lineWidth>
+         <lineChartType>-1</lineChartType>
+         <displayType>-99</displayType>
+         <showThresholds>false</showThresholds>
+         <invertValues>false</invertValues>
+         <useRawValues>false</useRawValues>
+         <multiMatch>false</multiMatch>
+         <regexMatch>true</regexMatch>
+         <instance></instance>
+         <column></column>
+         <displayFormat></displayFormat>
+      </dci>
+      <dci nodeId="0" dciId="0">
+         <dciName></dciName>
+         <dciDescription>Toner level.*Yellow.*</dciDescription>
+         <type>1</type>
+         <color>0xeeee</color>
+         <name>Yellow</name>
+         <lineWidth>2</lineWidth>
+         <lineChartType>-1</lineChartType>
+         <displayType>-99</displayType>
+         <showThresholds>false</showThresholds>
+         <invertValues>false</invertValues>
+         <useRawValues>false</useRawValues>
+         <multiMatch>false</multiMatch>
+         <regexMatch>true</regexMatch>
+         <instance></instance>
+         <column></column>
+         <displayFormat></displayFormat>
+      </dci>
+      <dci nodeId="0" dciId="0">
+         <dciName></dciName>
+         <dciDescription>^Toner level (((?!Black|Cyan|Magenta|Yellow).)+)$</dciDescription>
+         <type>1</type>
+         <color>UNSET</color>
+         <name>\1</name>
+         <lineWidth>2</lineWidth>
+         <lineChartType>-1</lineChartType>
+         <displayType>-99</displayType>
+         <showThresholds>false</showThresholds>
+         <invertValues>false</invertValues>
+         <useRawValues>false</useRawValues>
+         <multiMatch>true</multiMatch>
+         <regexMatch>true</regexMatch>
+         <instance></instance>
+         <column></column>
+         <displayFormat></displayFormat>
+      </dci>
+   </dciList>
+   <legendPosition>8</legendPosition>
+   <showLegend>true</showLegend>
+   <extendedLegend>false</extendedLegend>
+   <autoScale>true</autoScale>
+   <translucent>false</translucent>
+   <refreshRate>30</refreshRate>
+   <minYScaleValue>0.0</minYScaleValue>
+   <maxYScaleValue>100.0</maxYScaleValue>
+   <modifyYBase>false</modifyYBase>
+   <drillDownObjectId>0</drillDownObjectId>
+   <gaugeType>1</gaugeType>
+   <legendInside>true</legendInside>
+   <vertical>false</vertical>
+   <minValue>0.0</minValue>
+   <maxValue>100.0</maxValue>
+   <leftYellowZone>0.0</leftYellowZone>
+   <leftRedZone>0.0</leftRedZone>
+   <rightYellowZone>80.0</rightYellowZone>
+   <rightRedZone>90.0</rightRedZone>
+   <fontName></fontName>
+   <fontSize>0</fontSize>
+   <expectedTextWidth>0</expectedTextWidth>
+   <elementBordersVisible>false</elementBordersVisible>
+   <colorMode>3</colorMode>
+   <customColor>0</customColor>
+</element>
+		</dashboardElement>
+		<dashboardElement>
+			<type>19</type>
+<layout>
+   <horizontalSpan>1</horizontalSpan>
+   <verticalSpan>1</verticalSpan>
+   <grabVerticalSpace>true</grabVerticalSpace>
+   <heightHint>-1</heightHint>
+</layout>
+<element>
+   <title>Printed page info</title>
+   <titleFontSize>0</titleFontSize>
+   <objectId>4294967295</objectId>
+   <dciId>0</dciId>
+   <dciName></dciName>
+   <dciDescription>Printed pages</dciDescription>
+   <refreshRate>30</refreshRate>
+</element>
+		</dashboardElement>
+	</elements>
+	<objectMap>
+	</objectMap>
+	<dciMap>
+	</dciMap>
+</dashboard>
