@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<formatVersion>4</formatVersion>
+	<server>
+		<version>4.3.0-rc223</version>
+		<buildTag>4.3-223-g20c122be56</buildTag>
+		<operatingSystem>Linux 6.2.0-24-generic</operatingSystem>
+	</server>
+	<description></description>
+	<events>
+	</events>
+	<templates>
+	</templates>
+	<traps>
+	</traps>
+	<rules>
+	</rules>
+	<scripts>
+		<script id="10070">
+			<guid>ae1de6cc-5a08-4263-9606-062b6fe53002</guid>
+			<name>ToolBox</name>
+			<code>/**&#x0A; * Get table form agent ant print it using println()&#x0A; */&#x0A;function printAgentTable(node, tableName)&#x0A;{&#x0A;&#x09;// Read table data from agent&#x0A;   table = AgentReadTable(node, tableName);&#x0A;   if (table == null)&#x0A;   {&#x0A;         println(&quot;ERROR: Cannot read table from agent&quot;);&#x0A;         return;&#x0A;   }&#x0A;&#x0A;   // Print column names&#x0A;   for(i = 0; i &lt; table-&gt;columnCount; i++)&#x0A;         print(&quot;| &quot; .. left(table-&gt;getColumnName(i), 20));&#x0A;   println(&quot;|&quot;);&#x0A;   for(i = 0; i &lt; table-&gt;columnCount; i++)&#x0A;         print(&quot;+&quot; .. left(&quot;-&quot;, 21, &quot;-&quot;));&#x0A;   println(&quot;+&quot;);&#x0A;&#x0A;   // Print data&#x0A;   for(i = 0; i &lt; table-&gt;rowCount; i++)&#x0A;   {&#x0A;         for(j = 0; j &lt; table-&gt;columnCount; j++)&#x0A;         {&#x0A;                  print(&quot;| &quot; .. left(table-&gt;get(i, j), 20));&#x0A;         }&#x0A;         println(&quot;|&quot;);&#x0A;   }&#x0A;}&#x0A;&#x0A;/**&#x0A; * Get SNMP metric as a string. Function will return obtained value or null if failed to create transport&#x0A; */&#x0A;function readSNMPMetric(node, oid)&#x0A;{&#x0A;&#x09;transport = node-&gt;createSNMPTransport();    // Create SNMP transport for node&#x0A;   if (transport == null)&#x0A;   {&#x0A;      println(&quot;Failed to create SNMP transport, exit&quot;);&#x0A;      return null;&#x0A;   }&#x0A;   value = transport-&gt;getValue(oid);&#x0A;   return value;&#x0A;}&#x0A;&#x0A;/**&#x0A; * rint meta information about object like class name, class hierarchy, methods and attributes&#x0A; */&#x0A;function info(object)&#x0A;{&#x0A;&#x09;c = object-&gt;__class;&#x0A;&#x09;println(&quot;&quot;);&#x0A;&#x09;println(c-&gt;name);&#x0A;&#x09;println(&quot;   &quot; . ArrayToString(c-&gt;hierarchy, &quot; :: &quot;));&#x0A;&#x09;println(&quot;   Methods:&quot;);&#x0A;&#x09;for(m : c-&gt;methods)&#x0A;  &#x09;&#x09;println(&quot;      &quot; . m);&#x0A;&#x09;println(&quot;   Attributes:&quot;);&#x0A;&#x09;for(a : c-&gt;attributes)&#x0A;   &#x09;&#x09;println(&quot;      &quot; . a);&#x0A;}&#x0A;&#x0A;/**&#x0A; * Print all possible NXSL meta information (all classes, their methods and atgtributes, and functions)&#x0A; */&#x0A;function NXSLInfo()&#x0A;{&#x0A;&#x09;println(&quot;==== Functions ====&quot;);&#x0A;&#x09;for(f : NXSL::Functions)&#x0A;   &#x09;&#x09;println(f);&#x0A;&#x09;println(&quot;&quot;);&#x0A;&#x09;println(&quot;==== Classes ====&quot;);&#x0A;&#x09;for(c : NXSL::Classes)&#x0A;&#x09;{&#x0A;&#x09;&#x09;println(&quot;&quot;);&#x0A;   &#x09;&#x09;println(c-&gt;name);&#x0A;   &#x09;&#x09;println(&quot;   &quot; . ArrayToString(c-&gt;hierarchy, &quot; :: &quot;));&#x0A;   &#x09;&#x09;println(&quot;   Methods:&quot;);&#x0A;   &#x09;&#x09;for(m : c-&gt;methods)&#x0A;      &#x09;&#x09;println(&quot;      &quot; . m);&#x0A;   &#x09;&#x09;println(&quot;   Attributes:&quot;);&#x0A;   &#x09;&#x09;for(a : c-&gt;attributes)&#x0A;      &#x09;&#x09;println(&quot;      &quot; . a);&#x0A;&#x09;}&#x0A;}&#x0A;&#x0A;/**&#x0A; * Get all node objects under given container (includoing sub-containers) as array&#x0A; */&#x0A;sub getAllNodes(root)&#x0A;{&#x0A;  nodes = %{};&#x0A;  for(object : root-&gt;children)&#x0A;  {&#x0A;    if (classof(object) == &quot;Node&quot;)&#x0A;    {&#x0A;      nodes[object-&gt;id] = object;&#x0A;    }&#x0A;    else if (classof(object) == &quot;Container&quot;)&#x0A;    {&#x0A;      for(n : GetAllNodes(object))&#x0A;      {&#x0A;        if (nodes[n-&gt;id] == null)&#x0A;          nodes[n-&gt;id] = n;&#x0A;      }&#x0A;    }&#x0A;  }&#x0A;  return nodes-&gt;values;&#x0A;}&#x0A;&#x0A;/**&#x0A; * Check if given node is a Windows node (node should have platform name set correctly)&#x0A; */&#x0A;function isWindows(object)&#x0A;{&#x0A;&#x09;return classof(object) == &quot;Node&quot; &amp;&amp; object-&gt;isAgent &amp;&amp; object-&gt;platformName like &quot;windows-*&quot;;&#x0A;}&#x0A;&#x0A;/**&#x0A; * Check if given node is a Linux node (node should have platform name set correctly)&#x0A; */&#x0A;function isLinux(object)&#x0A;{&#x0A;&#x09;return classof(object) == &quot;Node&quot; &amp;&amp; object-&gt;isAgent &amp;&amp; object-&gt;platformName like &quot;Linux-*&quot;;&#x0A;}</code>
+		</script>
+	</scripts>
+	<objectTools>
+	</objectTools>
+	<dciSummaryTables>
+	</dciSummaryTables>
+	<actions>
+	</actions>
+	<webServiceDefinitions>
+	</webServiceDefinitions>
+	<assetManagementSchema>
+	</assetManagementSchema>
+</configuration>
