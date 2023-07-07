@@ -9,17 +9,17 @@ toolbox.xml - contains ToolBox script that will be imported to the script librar
 NetXMS version it was tested on: 4.4.0
 
 ## Usage
-Functions form toolbox can be used by importing them to your script using `import ToolBox;` statement at the beginning of your script or 
+Functions from toolbox can be used by importing them to your script using `import ToolBox;` statement at the beginning of your script or 
 by directly calling then using `ToolBox::functionName(parameters);` form.
 
 ### Examples
 
 ```
-// Get table form agent ant print it using println()
+// Get table from agent ant print it using println()
 ToolBox::printAgentTable($node, "FileSystem.Volumes");
 
 // Get SNMP metric as a string. Function will return obtained value or null if failed to create transport
-value = ToolBox::readSNMPMetric($node, ".1.3.6.1.2.1.2.2.1.1.1");
+value = ToolBox::snmpGet($node, ".1.3.6.1.2.1.2.2.1.1.1");
 println(value);
 
 // Print meta information about object like class name, class hierarchy, methods and attributes
