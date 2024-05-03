@@ -3,7 +3,7 @@
 	<columns>3</columns>
 	<flags>65536</flags>
 	<autoBindFlags>1</autoBindFlags>
-	<autoBindFilter>classof($object) == "Node" &amp;&amp; $node-&gt;isPrinter</autoBindFilter>
+	<autoBindFilter>classof($object) == "Node" &amp;&amp; $node.isPrinter</autoBindFilter>
 	<elements>
 		<dashboardElement>
 			<type>13</type>
