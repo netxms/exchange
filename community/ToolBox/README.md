@@ -6,7 +6,7 @@
 toolbox.xml - contains ToolBox script that will be imported to the script library.
 
 ## Version
-NetXMS version it was tested on: 4.4.0
+NetXMS version it was tested on: 5.0.0
 
 ## Usage
 Functions from toolbox can be used by importing them to your script using `import ToolBox;` statement at the beginning of your script or 
@@ -44,3 +44,4 @@ println(isLinux);
 ## Change Log
 
 06.Jul.2023 Initial release
+03.Mai.2024 Updates for version 5.0
