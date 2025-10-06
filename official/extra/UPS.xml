@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<formatVersion>5</formatVersion>
+	<nxslVersionV5>true</nxslVersionV5>
+	<server>
+		<version>5.2.4.14</version>
+		<buildTag>5.2-410-g3822065839</buildTag>
+		<operatingSystem>WinNT 6.2</operatingSystem>
+	</server>
+	<description></description>
+	<events>
+	</events>
+	<templates>
+		<template id="115341">
+			<guid>2bd6ab2b-3cea-ad4d-9542-90f50c49c1e3</guid>
+			<name>UPS</name>
+			<comments></comments>
+			<path>
+			</path>
+			<dataCollection>
+				<dci id="3334">
+					<guid>c7edf61b-b2ba-da4e-8f68-ea9cb1feaf37</guid>
+					<name>UPS.BatteryLevel({instance})</name>
+					<description>UPS {instance-name} battery charge level</description>
+					<dataType>0</dataType>
+					<transformedDataType>6</transformedDataType>
+					<samples>0</samples>
+					<origin>1</origin>
+					<scheduleType>0</scheduleType>
+					<interval></interval>
+					<retentionType>0</retentionType>
+					<retention></retention>
+					<systemTag></systemTag>
+					<userTag></userTag>
+					<delta>0</delta>
+					<flags>0</flags>
+					<snmpRawValueType>0</snmpRawValueType>
+					<snmpPort>0</snmpPort>
+					<snmpVersion>127</snmpVersion>
+					<instanceDiscoveryMethod>1</instanceDiscoveryMethod>
+					<instanceRetentionTime>-1</instanceRetentionTime>
+					<comments></comments>
+					<isDisabled>false</isDisabled>
+					<unitName></unitName>
+					<multiplier>0</multiplier>
+					<allThresholdsRearmEvent>0</allThresholdsRearmEvent>
+					<instance></instance>
+					<instanceDiscoveryData>UPS.DeviceList</instanceDiscoveryData>
+					<instanceFilter>s = $1.split(&quot; &quot;);&#x0A;return [s[0], s[3], null];</instanceFilter>
+				</dci>
+				<dci id="3339">
+					<guid>bbdb06eb-48ce-594f-b0b3-6a2a44ecb2b8</guid>
+					<name>UPS.BatteryVoltage({instance})</name>
+					<description>UPS {instance-name} battery voltage</description>
+					<dataType>5</dataType>
+					<transformedDataType>6</transformedDataType>
+					<samples>0</samples>
+					<origin>1</origin>
+					<scheduleType>0</scheduleType>
+					<interval></interval>
+					<retentionType>0</retentionType>
+					<retention></retention>
+					<systemTag></systemTag>
+					<userTag></userTag>
+					<delta>0</delta>
+					<flags>0</flags>
+					<snmpRawValueType>0</snmpRawValueType>
+					<snmpPort>0</snmpPort>
+					<snmpVersion>127</snmpVersion>
+					<instanceDiscoveryMethod>1</instanceDiscoveryMethod>
+					<instanceRetentionTime>-1</instanceRetentionTime>
+					<comments></comments>
+					<isDisabled>false</isDisabled>
+					<unitName></unitName>
+					<multiplier>0</multiplier>
+					<allThresholdsRearmEvent>0</allThresholdsRearmEvent>
+					<instance></instance>
+					<instanceDiscoveryData>UPS.DeviceList</instanceDiscoveryData>
+					<instanceFilter>s = $1.split(&quot; &quot;);&#x0A;return [s[0], s[3], null];</instanceFilter>
+				</dci>
+				<dci id="3340">
+					<guid>257000b4-4c88-5248-a703-165bf29b081c</guid>
+					<name>UPS.ConnectionStatus({instance})</name>
+					<description>UPS {instance-name} connection status</description>
+					<dataType>0</dataType>
+					<transformedDataType>6</transformedDataType>
+					<samples>0</samples>
+					<origin>1</origin>
+					<scheduleType>0</scheduleType>
+					<interval></interval>
+					<retentionType>0</retentionType>
+					<retention></retention>
+					<systemTag></systemTag>
+					<userTag></userTag>
+					<delta>0</delta>
+					<flags>0</flags>
+					<snmpRawValueType>0</snmpRawValueType>
+					<snmpPort>0</snmpPort>
+					<snmpVersion>127</snmpVersion>
+					<instanceDiscoveryMethod>1</instanceDiscoveryMethod>
+					<instanceRetentionTime>-1</instanceRetentionTime>
+					<comments></comments>
+					<isDisabled>false</isDisabled>
+					<unitName></unitName>
+					<multiplier>0</multiplier>
+					<allThresholdsRearmEvent>0</allThresholdsRearmEvent>
+					<instance></instance>
+					<instanceDiscoveryData>UPS.DeviceList</instanceDiscoveryData>
+					<instanceFilter>s = $1.split(&quot; &quot;);&#x0A;return [s[0], s[3], null];</instanceFilter>
+				</dci>
+				<dci id="3341">
+					<guid>e4224a8c-2cca-274c-b24b-2f209ceda34c</guid>
+					<name>UPS.EstimatedRuntime({instance})</name>
+					<description>UPS {instance-name} estimated on-battery runtime (minutes)</description>
+					<dataType>0</dataType>
+					<transformedDataType>6</transformedDataType>
+					<samples>0</samples>
+					<origin>1</origin>
+					<scheduleType>0</scheduleType>
+					<interval></interval>
+					<retentionType>0</retentionType>
+					<retention></retention>
+					<systemTag></systemTag>
+					<userTag></userTag>
+					<delta>0</delta>
+					<flags>0</flags>
+					<snmpRawValueType>0</snmpRawValueType>
+					<snmpPort>0</snmpPort>
+					<snmpVersion>127</snmpVersion>
+					<instanceDiscoveryMethod>1</instanceDiscoveryMethod>
+					<instanceRetentionTime>-1</instanceRetentionTime>
+					<comments></comments>
+					<isDisabled>false</isDisabled>
+					<unitName></unitName>
+					<multiplier>0</multiplier>
+					<allThresholdsRearmEvent>0</allThresholdsRearmEvent>
+					<instance></instance>
+					<instanceDiscoveryData>UPS.DeviceList</instanceDiscoveryData>
+					<instanceFilter>s = $1.split(&quot; &quot;);&#x0A;return [s[0], s[3], null];</instanceFilter>
+				</dci>
+				<dci id="3342">
+					<guid>ed9cd774-0e00-8946-88da-b1c5efd0b624</guid>
+					<name>UPS.Firmware({instance})</name>
+					<description>UPS {instance-name} firmware version</description>
+					<dataType>4</dataType>
+					<transformedDataType>6</transformedDataType>
+					<samples>0</samples>
+					<origin>1</origin>
+					<scheduleType>0</scheduleType>
+					<interval></interval>
+					<retentionType>0</retentionType>
+					<retention></retention>
+					<systemTag></systemTag>
+					<userTag></userTag>
+					<delta>0</delta>
+					<flags>0</flags>
+					<snmpRawValueType>0</snmpRawValueType>
+					<snmpPort>0</snmpPort>
+					<snmpVersion>127</snmpVersion>
+					<instanceDiscoveryMethod>1</instanceDiscoveryMethod>
+					<instanceRetentionTime>-1</instanceRetentionTime>
+					<comments></comments>
+					<isDisabled>false</isDisabled>
+					<unitName></unitName>
+					<multiplier>0</multiplier>
+					<allThresholdsRearmEvent>0</allThresholdsRearmEvent>
+					<instance></instance>
+					<instanceDiscoveryData>UPS.DeviceList</instanceDiscoveryData>
+					<instanceFilter>s = $1.split(&quot; &quot;);&#x0A;return [s[0], s[3], null];</instanceFilter>
+				</dci>
+				<dci id="3343">
+					<guid>2887264a-260d-a247-b669-6a9e566d8831</guid>
+					<name>UPS.LineFrequency({instance})</name>
+					<description>UPS {instance-name} input line frequency</description>
+					<dataType>0</dataType>
+					<transformedDataType>6</transformedDataType>
+					<samples>0</samples>
+					<origin>1</origin>
+					<scheduleType>0</scheduleType>
+					<interval></interval>
+					<retentionType>0</retentionType>
+					<retention></retention>
+					<systemTag></systemTag>
+					<userTag></userTag>
+					<delta>0</delta>
+					<flags>0</flags>
+					<snmpRawValueType>0</snmpRawValueType>
+					<snmpPort>0</snmpPort>
+					<snmpVersion>127</snmpVersion>
+					<instanceDiscoveryMethod>1</instanceDiscoveryMethod>
+					<instanceRetentionTime>-1</instanceRetentionTime>
+					<comments></comments>
+					<isDisabled>false</isDisabled>
+					<unitName></unitName>
+					<multiplier>0</multiplier>
+					<allThresholdsRearmEvent>0</allThresholdsRearmEvent>
+					<instance></instance>
+					<instanceDiscoveryData>UPS.DeviceList</instanceDiscoveryData>
+					<instanceFilter>s = $1.split(&quot; &quot;);&#x0A;return [s[0], s[3], null];</instanceFilter>
+				</dci>
+				<dci id="3344">
+					<guid>0204da15-104b-9640-af9a-cafe9a01abfb</guid>
+					<name>UPS.InputVoltage({instance})</name>
+					<description>UPS {instance-name} input line voltage</description>
+					<dataType>5</dataType>
+					<transformedDataType>6</transformedDataType>
+					<samples>0</samples>
+					<origin>1</origin>
+					<scheduleType>0</scheduleType>
+					<interval></interval>
+					<retentionType>0</retentionType>
+					<retention></retention>
+					<systemTag></systemTag>
+					<userTag></userTag>
+					<delta>0</delta>
+					<flags>0</flags>
+					<snmpRawValueType>0</snmpRawValueType>
+					<snmpPort>0</snmpPort>
+					<snmpVersion>127</snmpVersion>
+					<instanceDiscoveryMethod>1</instanceDiscoveryMethod>
+					<instanceRetentionTime>-1</instanceRetentionTime>
+					<comments></comments>
+					<isDisabled>false</isDisabled>
+					<unitName></unitName>
+					<multiplier>0</multiplier>
+					<allThresholdsRearmEvent>0</allThresholdsRearmEvent>
+					<instance></instance>
+					<instanceDiscoveryData>UPS.DeviceList</instanceDiscoveryData>
+					<instanceFilter>s = $1.split(&quot; &quot;);&#x0A;return [s[0], s[3], null];</instanceFilter>
+				</dci>
+				<dci id="3346">
+					<guid>d1bf3bd8-76d4-6243-9a4f-f52bac285ab4</guid>
+					<name>UPS.Load({instance})</name>
+					<description>UPS {instance-name} load</description>
+					<dataType>0</dataType>
+					<transformedDataType>6</transformedDataType>
+					<samples>0</samples>
+					<origin>1</origin>
+					<scheduleType>0</scheduleType>
+					<interval></interval>
+					<retentionType>0</retentionType>
+					<retention></retention>
+					<systemTag></systemTag>
+					<userTag></userTag>
+					<delta>0</delta>
+					<flags>0</flags>
+					<snmpRawValueType>0</snmpRawValueType>
+					<snmpPort>0</snmpPort>
+					<snmpVersion>127</snmpVersion>
+					<instanceDiscoveryMethod>1</instanceDiscoveryMethod>
+					<instanceRetentionTime>-1</instanceRetentionTime>
+					<comments></comments>
+					<isDisabled>false</isDisabled>
+					<unitName></unitName>
+					<multiplier>0</multiplier>
+					<allThresholdsRearmEvent>0</allThresholdsRearmEvent>
+					<instance></instance>
+					<instanceDiscoveryData>UPS.DeviceList</instanceDiscoveryData>
+					<instanceFilter>s = $1.split(&quot; &quot;);&#x0A;return [s[0], s[3], null];</instanceFilter>
+				</dci>
+				<dci id="3347">
+					<guid>40ca069a-e3ae-f64e-ac7c-8d99dd89a7fa</guid>
+					<name>UPS.MfgDate({instance})</name>
+					<description>UPS {instance-name} manufacturing date</description>
+					<dataType>4</dataType>
+					<transformedDataType>6</transformedDataType>
+					<samples>0</samples>
+					<origin>1</origin>
+					<scheduleType>0</scheduleType>
+					<interval></interval>
+					<retentionType>0</retentionType>
+					<retention></retention>
+					<systemTag></systemTag>
+					<userTag></userTag>
+					<delta>0</delta>
+					<flags>0</flags>
+					<snmpRawValueType>0</snmpRawValueType>
+					<snmpPort>0</snmpPort>
+					<snmpVersion>127</snmpVersion>
+					<instanceDiscoveryMethod>1</instanceDiscoveryMethod>
+					<instanceRetentionTime>-1</instanceRetentionTime>
+					<comments></comments>
+					<isDisabled>false</isDisabled>
+					<unitName></unitName>
+					<multiplier>0</multiplier>
+					<allThresholdsRearmEvent>0</allThresholdsRearmEvent>
+					<instance></instance>
+					<instanceDiscoveryData>UPS.DeviceList</instanceDiscoveryData>
+					<instanceFilter>s = $1.split(&quot; &quot;);&#x0A;return [s[0], s[3], null];</instanceFilter>
+				</dci>
+				<dci id="3348">
+					<guid>de14e366-501e-3a47-8073-6aa9a55794dc</guid>
+					<name>UPS.Model({instance})</name>
+					<description>UPS {instance-name} model</description>
+					<dataType>4</dataType>
+					<transformedDataType>6</transformedDataType>
+					<samples>0</samples>
+					<origin>1</origin>
+					<scheduleType>0</scheduleType>
+					<interval></interval>
+					<retentionType>0</retentionType>
+					<retention></retention>
+					<systemTag></systemTag>
+					<userTag></userTag>
+					<delta>0</delta>
+					<flags>0</flags>
+					<snmpRawValueType>0</snmpRawValueType>
+					<snmpPort>0</snmpPort>
+					<snmpVersion>127</snmpVersion>
+					<instanceDiscoveryMethod>1</instanceDiscoveryMethod>
+					<instanceRetentionTime>-1</instanceRetentionTime>
+					<comments></comments>
+					<isDisabled>false</isDisabled>
+					<unitName></unitName>
+					<multiplier>0</multiplier>
+					<allThresholdsRearmEvent>0</allThresholdsRearmEvent>
+					<instance></instance>
+					<instanceDiscoveryData>UPS.DeviceList</instanceDiscoveryData>
+					<instanceFilter>s = $1.split(&quot; &quot;);&#x0A;return [s[0], s[3], null];</instanceFilter>
+				</dci>
+				<dci id="3349">
+					<guid>3ff34aa3-a9b1-dc49-9843-4e596dc1c62d</guid>
+					<name>UPS.NominalBatteryVoltage({instance})</name>
+					<description>UPS {instance-name} nominal battery voltage</description>
+					<dataType>5</dataType>
+					<transformedDataType>6</transformedDataType>
+					<samples>0</samples>
+					<origin>1</origin>
+					<scheduleType>0</scheduleType>
+					<interval></interval>
+					<retentionType>0</retentionType>
+					<retention></retention>
+					<systemTag></systemTag>
+					<userTag></userTag>
+					<delta>0</delta>
+					<flags>0</flags>
+					<snmpRawValueType>0</snmpRawValueType>
+					<snmpPort>0</snmpPort>
+					<snmpVersion>127</snmpVersion>
+					<instanceDiscoveryMethod>1</instanceDiscoveryMethod>
+					<instanceRetentionTime>-1</instanceRetentionTime>
+					<comments></comments>
+					<isDisabled>false</isDisabled>
+					<unitName></unitName>
+					<multiplier>0</multiplier>
+					<allThresholdsRearmEvent>0</allThresholdsRearmEvent>
+					<instance></instance>
+					<instanceDiscoveryData>UPS.DeviceList</instanceDiscoveryData>
+					<instanceFilter>s = $1.split(&quot; &quot;);&#x0A;return [s[0], s[3], null];</instanceFilter>
+				</dci>
+				<dci id="3350">
+					<guid>bac438fd-734e-9247-8d82-bedd6488bb9b</guid>
+					<name>UPS.OnlineStatus({instance})</name>
+					<description>UPS {instance-name} online status</description>
+					<dataType>0</dataType>
+					<transformedDataType>6</transformedDataType>
+					<samples>0</samples>
+					<origin>1</origin>
+					<scheduleType>0</scheduleType>
+					<interval></interval>
+					<retentionType>0</retentionType>
+					<retention></retention>
+					<systemTag></systemTag>
+					<userTag></userTag>
+					<delta>0</delta>
+					<flags>0</flags>
+					<snmpRawValueType>0</snmpRawValueType>
+					<snmpPort>0</snmpPort>
+					<snmpVersion>127</snmpVersion>
+					<instanceDiscoveryMethod>1</instanceDiscoveryMethod>
+					<instanceRetentionTime>-1</instanceRetentionTime>
+					<comments></comments>
+					<isDisabled>false</isDisabled>
+					<unitName></unitName>
+					<multiplier>0</multiplier>
+					<allThresholdsRearmEvent>0</allThresholdsRearmEvent>
+					<instance></instance>
+					<instanceDiscoveryData>UPS.DeviceList</instanceDiscoveryData>
+					<instanceFilter>s = $1.split(&quot; &quot;);&#x0A;return [s[0], s[3], null];</instanceFilter>
+				</dci>
+				<dci id="3351">
+					<guid>f3e909f3-8d71-5541-9cd5-466954777299</guid>
+					<name>UPS.OutputVoltage({instance})</name>
+					<description>UPS {instance-name} output voltage</description>
+					<dataType>5</dataType>
+					<transformedDataType>6</transformedDataType>
+					<samples>0</samples>
+					<origin>1</origin>
+					<scheduleType>0</scheduleType>
+					<interval></interval>
+					<retentionType>0</retentionType>
+					<retention></retention>
+					<systemTag></systemTag>
+					<userTag></userTag>
+					<delta>0</delta>
+					<flags>0</flags>
+					<snmpRawValueType>0</snmpRawValueType>
+					<snmpPort>0</snmpPort>
+					<snmpVersion>127</snmpVersion>
+					<instanceDiscoveryMethod>1</instanceDiscoveryMethod>
+					<instanceRetentionTime>-1</instanceRetentionTime>
+					<comments></comments>
+					<isDisabled>false</isDisabled>
+					<unitName></unitName>
+					<multiplier>0</multiplier>
+					<allThresholdsRearmEvent>0</allThresholdsRearmEvent>
+					<instance></instance>
+					<instanceDiscoveryData>UPS.DeviceList</instanceDiscoveryData>
+					<instanceFilter>s = $1.split(&quot; &quot;);&#x0A;return [s[0], s[3], null];</instanceFilter>
+				</dci>
+				<dci id="3352">
+					<guid>f2f9fff0-6e16-b94c-8235-179cb19fd829</guid>
+					<name>UPS.SerialNumber({instance})</name>
+					<description>UPS {instance-name} serial number</description>
+					<dataType>4</dataType>
+					<transformedDataType>6</transformedDataType>
+					<samples>0</samples>
+					<origin>1</origin>
+					<scheduleType>0</scheduleType>
+					<interval></interval>
+					<retentionType>0</retentionType>
+					<retention></retention>
+					<systemTag></systemTag>
+					<userTag></userTag>
+					<delta>0</delta>
+					<flags>0</flags>
+					<snmpRawValueType>0</snmpRawValueType>
+					<snmpPort>0</snmpPort>
+					<snmpVersion>127</snmpVersion>
+					<instanceDiscoveryMethod>1</instanceDiscoveryMethod>
+					<instanceRetentionTime>-1</instanceRetentionTime>
+					<comments></comments>
+					<isDisabled>false</isDisabled>
+					<unitName></unitName>
+					<multiplier>0</multiplier>
+					<allThresholdsRearmEvent>0</allThresholdsRearmEvent>
+					<instance></instance>
+					<instanceDiscoveryData>UPS.DeviceList</instanceDiscoveryData>
+					<instanceFilter>s = $1.split(&quot; &quot;);&#x0A;return [s[0], s[3], null];</instanceFilter>
+				</dci>
+				<dci id="3353">
+					<guid>369a68c6-024e-b14f-a6db-420cd41df6d7</guid>
+					<name>UPS.Temperature({instance})</name>
+					<description>UPS {instance-name} temperature</description>
+					<dataType>0</dataType>
+					<transformedDataType>6</transformedDataType>
+					<samples>0</samples>
+					<origin>1</origin>
+					<scheduleType>0</scheduleType>
+					<interval></interval>
+					<retentionType>0</retentionType>
+					<retention></retention>
+					<systemTag></systemTag>
+					<userTag></userTag>
+					<delta>0</delta>
+					<flags>0</flags>
+					<snmpRawValueType>0</snmpRawValueType>
+					<snmpPort>0</snmpPort>
+					<snmpVersion>127</snmpVersion>
+					<instanceDiscoveryMethod>1</instanceDiscoveryMethod>
+					<instanceRetentionTime>-1</instanceRetentionTime>
+					<comments></comments>
+					<isDisabled>false</isDisabled>
+					<unitName></unitName>
+					<multiplier>0</multiplier>
+					<allThresholdsRearmEvent>0</allThresholdsRearmEvent>
+					<instance></instance>
+					<instanceDiscoveryData>UPS.DeviceList</instanceDiscoveryData>
+					<instanceFilter>s = $1.split(&quot; &quot;);&#x0A;return [s[0], s[3], null];</instanceFilter>
+				</dci>
+			</dataCollection>
+			<agentPolicies>
+			</agentPolicies>
+			<filter autoBind="true" autoUnbind="false">idx = $node?.readAgentTable(&quot;Agent.SubAgents&quot;)?.findRowIndexByInstance(&quot;UPS&quot;);&#x0A;return idx != null and idx &gt;= 0;</filter>
+		</template>
+	</templates>
+	<traps>
+	</traps>
+	<rules>
+	</rules>
+	<scripts>
+	</scripts>
+	<objectTools>
+	</objectTools>
+	<dciSummaryTables>
+	</dciSummaryTables>
+	<actions>
+	</actions>
+	<webServiceDefinitions>
+	</webServiceDefinitions>
+	<assetManagementSchema>
+	</assetManagementSchema>
+</configuration>
